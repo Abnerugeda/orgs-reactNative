@@ -10,7 +10,7 @@ export default function App() {
   });
 
   if (!fonteCarregada) {
-    return <View/>
+    return <View/> 
   }
 
   return (

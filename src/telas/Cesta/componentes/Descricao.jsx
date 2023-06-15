@@ -1,8 +1,9 @@
 import React from 'react'
-import { StyleSheet, View, Image} from 'react-native'
+import { StyleSheet, View, Image, TouchableOpacity } from 'react-native'
 import Texto from '../../../componentes/Texto'
+import Botao from './Botao'
 
-export default function Descricao({nome, logoFazenda, nomeFazenda, descricao, preco}) {
+export default function Descricao({nome, logoFazenda, nomeFazenda, descricao, preco, botao}) {
   return (
     <>
         <Texto style={styles.nome}>{nome}</Texto>
@@ -14,6 +15,9 @@ export default function Descricao({nome, logoFazenda, nomeFazenda, descricao, pr
             {descricao}
         </Texto>
         <Texto style={styles.preco}>{preco}</Texto>
+        <Botao> 
+            <Texto style={styles.textoBotao}>{botao}</Texto>
+        </Botao>
     </>
   )
 }
@@ -52,6 +56,13 @@ const styles = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8
+    },
+    textoBotao: {
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 16,
+        lineHeight: 26,
+        fontWeight: 'bold'
     }
 
 })
